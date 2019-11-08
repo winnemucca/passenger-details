@@ -1,5 +1,11 @@
 # FrontierAccounts
 
+This project was cloned off of another repository from frontier airlines.  
+
+Application was timeboxed 
+
+TODOS added for desired work given time. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.12.
 
 ## Development server
