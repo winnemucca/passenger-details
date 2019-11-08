@@ -1,0 +1,106 @@
+/* TODO add media queries for responsive design*/
+// TODO identify if team organizes scss files with BEM before refactoring.
+// TODO identify browser support currently using css grid
+// TODO implement overlapping fix for css grids
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Roboto, Helvetica, Arial, sans-serif
+}
+article {
+  height: 100%;
+  grid-template-columns:1fr;
+  grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  grid-template-rows: 100px 1fr 150px;
+}
+header {
+  grid-area: header;
+  background-color:#006643;
+  color: #fff;
+  grid-template-columns: 1% 98% 1%;
+}
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+}
+h2 {
+  font-size: 2em;
+  color:#006643;
+}
+h3 {
+  display: block;
+  font-size: 1.5em;
+  color:#006643;
+}
+main {
+  grid-area: main;
+}
+footer {
+  grid-area: footer;
+  background-color:#006643;
+  color: #fff;
+  grid-template-columns: 1% 98% 1%;
+  grid-template-rows: 5% 90% 5%;
+}
+.grid {
+  display: grid;
+}
+.title-container {
+  grid-column-start: 2;
+  align-self: center;
+}
+#home-content {
+  grid-row-gap: 25px;
+  grid-template-rows: 10px 100px auto;
+}
+#account-grid {
+  // TODO identify desired view with team.  Currently this hack/fix will move the footer view down.  Other hack would be to hide overflow with scroll
+  // height: 565px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-start: 3;
+}
+.account-column {
+  grid-template-rows: 2em repeat(2, 10em);
+}
+.content-title-container {
+  justify-self: center;
+  height: 1em;
+  grid-row-start: 2;
+}
+#overdue-account-container-title > h3{
+  color: #B22222;
+}
+#inactive-account-container-title > h3 {
+  color:#808080;
+}
+.account-container {
+  justify-self: center;
+  height: 5em;
+}
+.account-container-title {
+  justify-self: center;
+}
+.account-data-list {
+  background: gainsboro;
+  border-radius: 5px;
+  list-style: none;
+  margin: 2px 0;
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
+}
+.account-data-list > li {
+  margin: 10px 0;
+}
+.account-data-list > li > label {
+  font-weight: bold;
+  margin: 0 5px 0 0;
+}
+.copy {
+  place-self: end;
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
